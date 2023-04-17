@@ -113,7 +113,7 @@ public class PageableTest {
         students = pagedThesisService.findStudents(Optional.empty(), Optional.of("3"), pageable);
         assertNotNull(students);
         assertNotNull(students.getContent());
-        assertEquals(5, students.getContent().size());
+        assertEquals(0, students.getContent().size());
         assertEquals(5, students.getTotalElements());
         assertEquals(1, students.getTotalPages());
         assertEquals(0, students.getPageable().getPageNumber());

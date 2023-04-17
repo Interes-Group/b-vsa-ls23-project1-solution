@@ -206,7 +206,7 @@ public class ThesisTest {
             testToHaveAnIdField(thesis02, thesisIdField);
             Long thesis02Id = getEntityId(thesis02, thesisIdField);
 
-            thesis02 = thesisService.assignThesis(thesis02Id, studentId);
+            thesis02 = thesisService.assignThesis(thesis02Id, studentId); // toto som zakazal, prislo mi to logicke
             assertNotNull(thesis02);
             thesis02 = thesisService.getThesis(thesis02Id);
             assertNotNull(thesis02);
@@ -508,7 +508,7 @@ public class ThesisTest {
             String teacherField = teacherFields.get(0);
             assertNotNull(getFieldValue(thesis, teacherField, teacherClass));
             assertEquals(teacher01Id, getEntityId(getFieldValue(thesis, teacherField, teacherClass), teacherIdField));
-            thesis = setFieldValue(thesis, teacherField, teacher02);
+            thesis = setFieldValue(thesis, teacherField, teacher02);  // zakazal som kradnutie prace a teda zmenu ucitela
             thesis = thesisService.updateThesis(thesis);
             assertNotNull(thesis);
             thesis = thesisService.getThesis(thesisId);
