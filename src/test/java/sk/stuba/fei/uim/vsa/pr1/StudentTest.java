@@ -140,7 +140,7 @@ public class StudentTest {
             student = thesisService.updateStudent(student);
             assertNotNull(student);
             assertEquals(randomSetStringForTesting, getFieldValue(student, stringField, String.class));
-            student = thesisService.getStudent(Student01.aisId);
+            student = thesisService.getStudent(getEntityId(student, studentIdField));
             assertNotNull(student);
             assertEquals(randomSetStringForTesting, getFieldValue(student, stringField, String.class));
             assertNotEquals(originalStringValue, getFieldValue(student, stringField, String.class));
