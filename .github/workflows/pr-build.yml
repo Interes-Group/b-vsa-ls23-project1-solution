@@ -69,4 +69,4 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
 
       - name: Build
-        run: mvn clean package install -DskipTests=true
+        run: mvn -B clean verify
