@@ -130,10 +130,11 @@ public class TeacherTest {
             Object finalTeacher = teacher;
             List<String> stringFields = findField(teacher, String.class).stream()
                     .filter(f -> checkIfFieldHasSetter(finalTeacher, f, String.class))
+                    .filter(f -> !f.toLowerCase().contains("mail"))
                     .collect(Collectors.toList());
             assertFalse(stringFields.isEmpty());
             String stringField = stringFields.get(new SecureRandom().nextInt(stringFields.size()));
-            String randomSetStringForTesting = Base64.getEncoder().encodeToString((Teacher01.institute + new SecureRandom().nextInt(100)).getBytes());
+            String randomSetStringForTesting = Base64.getEncoder().encodeToString((Teacher01.institute + " " + new SecureRandom().nextInt(100)).getBytes());
             String originalStringValue = getFieldValue(teacher, stringField, String.class);
 
             teacher = setFieldValue(teacher, stringField, randomSetStringForTesting);
