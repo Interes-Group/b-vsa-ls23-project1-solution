@@ -4,7 +4,7 @@ public class TestData {
 
     public static class Student01 {
         public static final Long aisId = 70127L;
-        public static final String name = "Test-Student";
+        public static final String name = "Test Student";
         public static final String email = "xtest@stuba.sk";
         public static final String studyProgramme = "API";
         public static final int year = 8;
@@ -22,7 +22,7 @@ public class TestData {
 
     public static class Teacher01 {
         public static final Long aisId = 80123L;
-        public static final String name = "Test-Teacher";
+        public static final String name = "Test Teacher";
         public static final String email = "test.teacher@stuba.sk";
         public static final String institute = "UIM";
         public static final String department = "Software engineering";

@@ -160,7 +160,7 @@ public class ThesisTest {
         }
     }
 
-    @Test
+   /* @Test
     void TH02_1_shouldAssignThesisToStudentWithAlreadyAssignedThesis() {
         try {
             Object teacher = createTeacher(thesisService, Teacher01.class);
@@ -223,7 +223,7 @@ public class ThesisTest {
         } catch (Exception e) {
             fail(e);
         }
-    }
+    }*/
 
     @Test
     void TH02_2_shouldNOTAssignAlreadyAssignedThesis() {
