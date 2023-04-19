@@ -46,6 +46,7 @@ public class StudentTest {
     @BeforeEach
     void before() {
         clearDB(db);
+        thesisService.emf.getCache().evictAll();
     }
 
     @AfterAll
