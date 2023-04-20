@@ -135,7 +135,8 @@ public class TeacherTest {
                     .collect(Collectors.toList());
             assertFalse(stringFields.isEmpty());
             String stringField = stringFields.get(new SecureRandom().nextInt(stringFields.size()));
-            String randomSetStringForTesting = Base64.getEncoder().encodeToString((Teacher01.institute + " " + new SecureRandom().nextInt(100)).getBytes());
+            String randomSetStringForTesting = Base64.getEncoder().encodeToString((Teacher01.institute + new SecureRandom().nextInt(100)).getBytes());
+            randomSetStringForTesting = randomSetStringForTesting.substring(0, randomSetStringForTesting.length() / 2) + " " + randomSetStringForTesting.substring(randomSetStringForTesting.length() / 2);
             String originalStringValue = getFieldValue(teacher, stringField, String.class);
 
             teacher = setFieldValue(teacher, stringField, randomSetStringForTesting);
